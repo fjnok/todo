@@ -1,0 +1,16 @@
+<h1>編集管理</h1>
+<%= form_for@task do |f| %>
+<P>
+    <%= f.label :taitle %> <br>
+    <%= f.text_field :title %>
+    <% if @task.errors.any? %>
+        <%= @task.errors.messages[:title][0] %>
+    <% end %>
+    
+</P>
+   
+    
+<p>
+    <%= f.submit %>
+</p>
+<% end %>
